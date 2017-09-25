@@ -8,6 +8,6 @@ RUN Invoke-WebRequest https://github.com/ojdkbuild/ojdkbuild/releases/download/1
     
 ENV JAVA_HOME="C:\Program Files\Java\OpenJDK"
 
-RUN ["cmd", "-Command", "setx /M PATH '%PATH%;%JAVA_HOME%\bin'"]
+RUN setx /M PATH "%PATH%;%JAVA_HOME%\bin"
 
-CMD [ "java", "-version"]
+CMD [ "C:\Program Files\Java\OpenJDK\bin\java", "-version"]
