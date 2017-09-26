@@ -12,6 +12,6 @@ ENV JAVA_HOME="C:\Program Files\Java\OpenJDK"
 
 COPY --from=tools $JAVA_HOME $JAVA_HOME
 
-#RUN setx /M PATH "%PATH%;C:\Java\OpenJDK\bin"
+RUN setx /M PATH "%PATH%;%JAVA_HOME%\bin"
 
 #CMD [ "java", "-version"]
