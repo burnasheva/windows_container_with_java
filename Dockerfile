@@ -10,4 +10,4 @@ ENV JAVA_HOME="C:\Java\OpenJDK"
 
 RUN setx /M PATH "%PATH%;C:\Java\OpenJDK\bin"
 
-CMD [ "C:\Java\OpenJDK\bin\java", "-version"]
+CMD [ "java", "-version"]
