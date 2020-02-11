@@ -1,4 +1,4 @@
-FROM microsoft/windowsservercore AS tools
+FROM mcr.microsoft.com/windows/servercore AS tools
 
 SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]
 
@@ -7,7 +7,7 @@ RUN [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tl
     Expand-Archive openjdk.zip -DestinationPath $Env:ProgramFiles\Java\OpenJDK; \
     Remove-Item -Force openjdk.zip
   
-FROM microsoft/windowsservercore:latest  
+FROM mcr.microsoft.com/windows/servercore  
 
 ENV JAVA_HOME="C:\Program Files\Java\OpenJDK\java-1.8.0-openjdk-1.8.0.131-1.b11.ojdkbuild.windows.x86_64"
 
